@@ -1,0 +1,44 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="http://192.168.20.32:8080/static/js/jquery-easyui-1.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://192.168.20.32:8080/static/js/jquery-easyui-1.4.1/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="http://192.168.20.32:8080/static/js/jquery-easyui-1.4.1/locale/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript" src="http://192.168.20.32:8080/static/js/common.js"></script>
+<script type="text/javascript">
+ function checkS(){
+ var html=""
+ alert("ssdasdas")
+    	
+		  
+$.ajax({
+        url: "http://192.168.20.32:8080/download",
+        datatype: "json",
+        type: 'post',
+        success: function (e) {   //成功后回调
+            alert(e.Name); 
+        },
+        error: function(e){    //失败后回调
+            alert(e.error);
+        },
+        beforeSend: function(){  
+            alert("正在加载");
+        }
+})
+
+    }
+    </script>
+
+上传文件
+</head>
+<body>
+<button onclick="checkS()">ssss</button>
+<lable id="ie">sss</label>
+<div name="link" id="lk"></div>
+<form enctype="multipart/form-data" action="http://192.168.20.32:8080/upload" method="post">
+<input type="file" name="uploadfile" />
+<input type="hidden" name="token" value="{{.}}" />
+<input type="submit" value="upload" />
+</form>
+</body>
+</html>

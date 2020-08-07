@@ -1,0 +1,23 @@
+git config
+
+ssh key ---> gitlab
+
+========================================
+
+how use git
+how use linux
+
+dir --> GOPATH/src/newgitlab.com/blockchain/
+
+git clone ssh://git@43.247.68.8:6422/blockchain/exchange.git
+
+===========================================
+
+http://jira:8100/pages/viewpage.action?pageId=7308358
+http://jira:8100/pages/viewpage.action?pageId=7308362
+
+gin gorm grpc
+
+github
+
+
